@@ -1,0 +1,61 @@
+/* src/app/globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-deep: #080C14;
+  --bg-card: #0D1420;
+  --bg-elevated: #111927;
+  --accent: #00C2FF;
+  --gold: #FFB800;
+  --green: #00E599;
+  --red: #FF4D6A;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background: var(--bg-deep);
+  color: #E8F0FE;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #1E2D42; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #2A3F5C; }
+
+.font-mono { font-family: 'JetBrains Mono', monospace; }
+
+/* Glow effects */
+.glow-accent { box-shadow: 0 0 30px rgba(0, 194, 255, 0.2); }
+.glow-green  { box-shadow: 0 0 30px rgba(0, 229, 153, 0.2); }
+.glow-gold   { box-shadow: 0 0 30px rgba(255, 184, 0, 0.2); }
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #00C2FF, #A855F7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Card hover */
+.card-hover {
+  transition: all 0.2s ease;
+}
+.card-hover:hover {
+  border-color: #2A3F5C;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* Number animation */
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.count-up { animation: countUp 0.4s ease-out; }
