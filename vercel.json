@@ -1,17 +1,4 @@
 {
-  "version": 2,
-  "name": "tradepulse-frontend",
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/next"
-    }
-  ],
-  "env": {
-    "NEXT_PUBLIC_API_URL": "@tradepulse_api_url",
-    "NEXT_PUBLIC_GOOGLE_CLIENT_ID": "@google_client_id",
-    "NEXTAUTH_SECRET": "@nextauth_secret"
-  },
   "headers": [
     {
       "source": "/(.*)",
